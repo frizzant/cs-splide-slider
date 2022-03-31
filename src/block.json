@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "cs-slider/cs-slider",
+	"version": "0.1.0",
+	"title": "CS Slider Block",
+	"category": "design",
+	"icon": "slides",
+	"description": "Displays Content in a Slider",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "cs-slider",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
