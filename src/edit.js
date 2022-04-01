@@ -12,6 +12,7 @@ import {__} from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import {useBlockProps, InnerBlocks} from '@wordpress/block-editor';
+import {Button} from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,6 +31,33 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 
+/**
+ * Custom Appender meant to be used when there is only one type of block that can be inserted to an InnerBlocks instance.
+ *
+ * @param buttonText
+ * @param onClick
+ * @param clientId
+ * @param allowedBlock
+ * @param innerBlocks
+ * @param {Object} props
+ */
+
+const SingleBlockTypeAppender = (
+	{
+		buttonText = __('Add Item'),
+		onClick,
+		clientId,
+		allowedBlock,
+		innerBlocks,
+		...props
+	}) => {
+	return (
+		<Button onClick={onClick} {...props} >
+			{buttonText}
+		</Button>
+	);
+};
+
 export default function Edit({attributes, setAttributes}) {
 	const {} = attributes;
 
@@ -41,11 +69,21 @@ export default function Edit({attributes, setAttributes}) {
 
 	return (
 		<div {...blockProps}>
-			<div className="main-carousel">
+			<div className='main-carousel'>
 				<InnerBlocks
 					allowedBlocks={ALLOWED_BLOCKS}
 					template={TEMPLATE}
-					renderAppender={() => <InnerBlocks.ButtonBlockAppender/>}
+					orientation='horizontal'
+					renderAppender={
+						() =>
+							<SingleBlockTypeAppender
+								isDefault
+								isLarge
+								buttonText="Add Block"
+								allowedBlock={ALLOWED_BLOCKS}
+								clientId={this.props.clientId}
+							/>
+					}
 				/>
 			</div>
 		</div>
