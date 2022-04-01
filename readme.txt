@@ -32,6 +32,10 @@ The file './src/flickity-config.json' contains an object that is passed to the '
 = How do i programmatically add flickity slider settings? =
 You will have to create the wanted backend settings and then output the options object in the 'save.js' file. There is a commented 'data-flickity' attribute waiting for you to add your settings.
 
+= What is the innerBlockWrapper.js for? =
+This file is used to wrap the inner blocks in the slider. Due to the nature of gutenberg it is not directly possible to allow block-variations with specific attributes to be added.
+This is a workaround to get blocks with presets to work.
+
 
 == Screenshots ==
 

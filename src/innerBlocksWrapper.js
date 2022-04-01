@@ -14,6 +14,9 @@ import {InnerBlocks} from '@wordpress/block-editor';
  */
 
 registerBlockType('cs/flickity-slider-inner', {
+	/**
+	 * These are the attributes for this block.
+	 */
 	title: __('Cover Block', 'cs-slider'),
 	category: 'design',
 	icon: 'slides',

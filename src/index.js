@@ -7,7 +7,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import blockConfig from './block.json';
 
 /**
- * Import the innerBlock wrapper that is neccessary to add innerBlocks with specific attributes on click
+ * Import the innerBlock wrapper that is necessary to add innerBlocks with specific attributes on click
  */
 import './innerBlocksWrapper.js';
 

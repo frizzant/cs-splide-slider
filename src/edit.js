@@ -24,7 +24,7 @@ import './editor.scss';
  */
 
 export default function Edit({attributes, setAttributes}) {
-	const {} = attributes;
+	const { /** Your custom attributes **/ } = attributes;
 
 	const blockProps = useBlockProps();
 	const ALLOWED_BLOCKS = ['cs/flickity-slider-inner'];
