@@ -1,3 +1,5 @@
+@import '../node_modules/flickity/dist/flickity';
+
 /**
  * The following styles get applied both on the front of your site
  * and in the editor.
@@ -5,8 +7,13 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-cs-slider-cs-slider {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-cs-flickity-slider {
+  .main-carousel {
+  }
+
+  .carousel-cell {
+	body:not(.block-editor-page) & {
+	  position: absolute;
+	}
+  }
 }
