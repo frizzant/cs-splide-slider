@@ -4,13 +4,19 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-cs-flickity-slider {
-  .block-editor-block-list__layout {
-	overflow-x: auto;
-	display: flex;
+body.block-editor-page {
+  .wp-block-cs-flickity-slider {
+	.block-editor-block-list__layout {
+	  overflow-x: auto;
+	  display: flex;
 
-	.wp-block {
-	  min-width: 100%;
+	  .block-editor-block-list__block {
+		min-width: 100%;
+
+		.wp-block {
+		  width: 100%;
+		}
+	  }
 	}
   }
 }

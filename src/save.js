@@ -22,6 +22,7 @@ import {useBlockProps, InnerBlocks} from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
+
 export default function save() {
 	const blockProps = useBlockProps.save();
 
