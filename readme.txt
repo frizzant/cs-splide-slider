@@ -1,4 +1,4 @@
-=== CS Slider Block ===
+=== CS Flickity Slider Block ===
 Contributors:      Erin McGowan | Frizzant
 Tags:              block
 Tested up to:      5.9
@@ -10,10 +10,8 @@ Displays Content in a Slider
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Gutenberg block for displaying content in a slider with the amazing Flickity Slider. By default it includes a non locked 'cover/cover' block.
+Flickity has the same license as this plugin. Commercial use will have to purchase a flickity license too. See https://flickity.metafizzy.co/license.html .
 
 == Installation ==
 
@@ -27,13 +25,13 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
 
-An answer to that question.
+= How do I change flickity slider settings? =
+The file './src/flickity-config.json' contains an object that is passed to the 'frontend.js' script. You can simply add your options there, then rebuild the project with 'npm build'.
 
-= What about foo bar? =
+= How do i programmatically add flickity slider settings? =
+You will have to create the wanted backend settings and then output the options object in the 'save.js' file. There is a commented 'data-flickity' attribute waiting for you to add your settings.
 
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
@@ -47,9 +45,3 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 0.1.0 =
 * Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
