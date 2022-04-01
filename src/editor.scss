@@ -5,4 +5,12 @@
  */
 
 .wp-block-cs-flickity-slider {
+  .block-editor-block-list__layout {
+	overflow-x: auto;
+	display: flex;
+
+	.wp-block {
+	  min-width: 100%;
+	}
+  }
 }

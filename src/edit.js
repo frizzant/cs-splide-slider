@@ -30,6 +30,7 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 
+
 export default function Edit({attributes, setAttributes}) {
 	const {} = attributes;
 
@@ -41,10 +42,11 @@ export default function Edit({attributes, setAttributes}) {
 
 	return (
 		<div {...blockProps}>
-			<div className="main-carousel">
+			<div className='main-carousel'>
 				<InnerBlocks
 					allowedBlocks={ALLOWED_BLOCKS}
 					template={TEMPLATE}
+					orientation='horizontal'
 					renderAppender={() => <InnerBlocks.ButtonBlockAppender/>}
 				/>
 			</div>
