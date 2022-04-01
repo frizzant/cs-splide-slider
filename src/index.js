@@ -7,6 +7,11 @@ import { registerBlockType } from '@wordpress/blocks';
 import blockConfig from './block.json';
 
 /**
+ * Import the innerBlock wrapper that is necessary to add innerBlocks with specific attributes on click
+ */
+import './innerBlocksWrapper.js';
+
+/**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * All files containing `style` keyword are bundled together. The code used
  * gets applied both to the front of your site and to the editor.

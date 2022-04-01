@@ -1,18 +1,10 @@
 /**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
-import {__} from '@wordpress/i18n';
-
-/**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import {useBlockProps, InnerBlocks} from '@wordpress/block-editor';
-import {Button} from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,41 +23,12 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 
-/**
- * Custom Appender meant to be used when there is only one type of block that can be inserted to an InnerBlocks instance.
- *
- * @param buttonText
- * @param onClick
- * @param clientId
- * @param allowedBlock
- * @param innerBlocks
- * @param {Object} props
- */
-
-const SingleBlockTypeAppender = (
-	{
-		buttonText = __('Add Item'),
-		onClick,
-		clientId,
-		allowedBlock,
-		innerBlocks,
-		...props
-	}) => {
-	return (
-		<Button onClick={onClick} {...props} >
-			{buttonText}
-		</Button>
-	);
-};
-
 export default function Edit({attributes, setAttributes}) {
-	const {} = attributes;
+	const { /** Your custom attributes **/ } = attributes;
 
 	const blockProps = useBlockProps();
-	const ALLOWED_BLOCKS = ['core/cover'];
-	/** Add .carousel-cell class to the inner blocks for flickity carousel styling **/
-	const innerBlockPresets = {'className': 'carousel-cell', 'align': 'full'};
-	const TEMPLATE = [['core/cover', innerBlockPresets], ['core/cover', innerBlockPresets], ['core/cover', innerBlockPresets]];
+	const ALLOWED_BLOCKS = ['cs/flickity-slider-inner'];
+	const TEMPLATE = [['cs/flickity-slider-inner'], ['cs/flickity-slider-inner'], ['cs/flickity-slider-inner']];
 
 	return (
 		<div {...blockProps}>
@@ -74,16 +37,7 @@ export default function Edit({attributes, setAttributes}) {
 					allowedBlocks={ALLOWED_BLOCKS}
 					template={TEMPLATE}
 					orientation='horizontal'
-					renderAppender={
-						() =>
-							<SingleBlockTypeAppender
-								isDefault
-								isLarge
-								buttonText="Add Block"
-								allowedBlock={ALLOWED_BLOCKS}
-								clientId={this.props.clientId}
-							/>
-					}
+					renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
 				/>
 			</div>
 		</div>
