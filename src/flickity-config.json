@@ -1,3 +1,4 @@
 {
-  "draggable": true
+  "draggable": true,
+  "imagesLoaded": true
 }

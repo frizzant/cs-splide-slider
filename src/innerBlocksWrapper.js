@@ -38,7 +38,7 @@ registerBlockType('cs/flickity-slider-inner', {
 	edit: () => {
 		const ALLOWED_BLOCKS = ['core/cover'];
 		/** Add .carousel-cell class to the inner blocks for flickity carousel styling **/
-		const innerBlockPresets = {'className': 'carousel-cell', 'align': 'full'};
+		const innerBlockPresets = {'align': 'full'};
 		const TEMPLATE = [['core/cover', innerBlockPresets]];
 
 		return (

@@ -2,6 +2,7 @@
  * Set up the Flickity dependencies and stles
  */
 const Flickity = require('flickity');
+require('flickity-imagesloaded');
 import flickityOptions from './flickity-config.json';
 
 document.addEventListener("DOMContentLoaded", function () {
