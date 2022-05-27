@@ -28,7 +28,7 @@ export default function Edit({attributes, setAttributes}) {
 
 	const blockProps = useBlockProps();
 	const ALLOWED_BLOCKS = ['cs/flickity-slider-inner'];
-	const TEMPLATE = [['cs/flickity-slider-inner'], ['cs/flickity-slider-inner'], ['cs/flickity-slider-inner']];
+	const TEMPLATE = [['cs/flickity-slider-inner', {dimRatio: 0}], ['cs/flickity-slider-inner', {dimRatio: 0}], ['cs/flickity-slider-inner', {dimRatio: 0}]];
 
 	return (
 		<div {...blockProps}>
