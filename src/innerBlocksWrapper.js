@@ -17,7 +17,7 @@ registerBlockType('cs/flickity-slider-inner', {
 	/**
 	 * These are the attributes for this block.
 	 */
-	title: __('Cover Block', 'cs-slider'),
+	title: __('Slide', 'cs-slider'),
 	category: 'design',
 	icon: 'slides',
 	description: __('Displays the Cover Block as a slide', 'cs-slider'),
