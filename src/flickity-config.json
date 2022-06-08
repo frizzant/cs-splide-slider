@@ -1,4 +1,5 @@
 {
   "draggable": true,
-  "imagesLoaded": true
+  "imagesLoaded": true,
+  "watchCSS": true
 }
