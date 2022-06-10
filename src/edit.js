@@ -32,7 +32,7 @@ export default function Edit({attributes, setAttributes}) {
 
 	return (
 		<div {...blockProps}>
-			<section className="splidex" aria-label="slider">
+			<section className="splide" aria-label="slider">
 				<div className="splide__track">
 					<ul className="splide__list">
 						<InnerBlocks
