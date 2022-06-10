@@ -13,18 +13,18 @@ import {InnerBlocks} from '@wordpress/block-editor';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 
-registerBlockType('cs/flickity-slider-inner', {
+registerBlockType('cs/splide-slide-inner', {
 	/**
 	 * These are the attributes for this block.
 	 */
 	title: __('Slide', 'cs-slider'),
 	category: 'design',
 	icon: 'slides',
-	description: __('Displays the Cover Block as a slide', 'cs-slider'),
+	description: __('Adds an slider element', 'cs-slider'),
 	supports: {
 		align: true,
 	},
-	parent: ['cs/flickity-slider'],
+	parent: ['cs/splide-slider'],
 	textdomain: 'cs-slider',
 	attributes: {
 		align: {
@@ -36,19 +36,19 @@ registerBlockType('cs/flickity-slider-inner', {
 	 * @see ./edit.js
 	 */
 	edit: () => {
-		const ALLOWED_BLOCKS = ['core/cover'];
+		const ALLOWED_BLOCKS = ['core/image', 'core/embed'];
 		/** Add .carousel-cell class to the inner blocks for flickity carousel styling **/
 		const innerBlockPresets = {'align': 'full'};
-		const TEMPLATE = [['core/cover', innerBlockPresets]];
+		const TEMPLATE = [['core/image', innerBlockPresets]];
 
 		return (
-			<div className='carousel-cell'>
+			<li className='splide__slide'>
 				<InnerBlocks
 					allowedBlocks={ALLOWED_BLOCKS}
 					template={TEMPLATE}
 					renderAppender={false}
 				/>
-			</div>
+			</li>
 		);
 	},
 	/**
@@ -56,9 +56,9 @@ registerBlockType('cs/flickity-slider-inner', {
 	 */
 	save: () => {
 		return (
-			<div className="carousel-cell">
+			<li className="splide__slide">
 				<InnerBlocks.Content/>
-			</div>
+			</li>
 		);
 	},
 });

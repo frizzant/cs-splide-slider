@@ -4,10 +4,9 @@
 import Splide from '@splidejs/splide';
 import options from './options.json';
 
-const viewportWidth = document.documentElement.clientWidth;
-const destroyBlockStyle = (viewportWidth < 980);
-
 document.addEventListener( 'DOMContentLoaded', function() {
+	const viewportWidth = document.documentElement.clientWidth;
+	const destroyBlockStyle = (viewportWidth < 980);
 	const splideSliders = document.querySelectorAll('.wp-block-cs-splide-slider');
 
 	/**
