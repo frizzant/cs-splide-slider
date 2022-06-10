@@ -1,4 +1,6 @@
-@import '../node_modules/flickity/dist/flickity';
+.page, .single {
+  @import '@splidejs/splide/css';
+}
 
 /**
  * The following styles get applied both on the front of your site
@@ -7,18 +9,13 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-cs-flickity-slider {
-  .main-carousel {
-	/**
-	 * Add your own styles here.
-	 */
+.splide {
+  &__track {
   }
 
-  .carousel-cell {
-	width: 100%;
+  &__list {
+  }
 
-	body:not(.block-editor-page) & {
-	  position: absolute;
-	}
+  &__slide {
   }
 }

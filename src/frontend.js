@@ -1,17 +1,17 @@
 /**
  * Set up the Flickity dependencies and stles
  */
-const Flickity = require('flickity');
-require('flickity-imagesloaded');
-import flickityOptions from './flickity-config.json';
+import Splide from '@splidejs/splide';
+import options from './options.json';
 
-document.addEventListener("DOMContentLoaded", function () {
-	const flktySliders = document.querySelectorAll('.main-carousel');
+document.addEventListener( 'DOMContentLoaded', function() {
+	const splideSliders = document.querySelectorAll('.splide');
 
 	/**
-	 * Initialize every Flickity slider
+	 * Initialize every Splide slider
 	 */
-	[...flktySliders].map(item => item).forEach(flktySlider => {
-		new Flickity(flktySlider, flickityOptions);
+	[...splideSliders].map(item => item).forEach(splideSlider => {
+		let splide = new Splide( splideSlider, options );
+		splide.mount();
 	});
-});
+} );
