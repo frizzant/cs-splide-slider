@@ -3,7 +3,7 @@
  */
 import Splide from '@splidejs/splide';
 
-import flickityOptions from './config.json';
+import options from './options.json';
 
 document.addEventListener( 'DOMContentLoaded', function() {
 	const splideSliders = document.querySelectorAll('.splide');
@@ -12,7 +12,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	 * Initialize every Splide slider
 	 */
 	[...splideSliders].map(item => item).forEach(splideSlider => {
-		let splide = new Splide( splideSlider );
+		let splide = new Splide( splideSlider, options );
 		splide.mount();
 	});
 } );
