@@ -36,10 +36,10 @@ registerBlockType('cs/splide-slide-inner', {
 	 * @see ./edit.js
 	 */
 	edit: () => {
-		const ALLOWED_BLOCKS = ['core/cover', 'core/embed'];
+		const ALLOWED_BLOCKS = ['core/image', 'core/embed'];
 		/** Add .carousel-cell class to the inner blocks for flickity carousel styling **/
 		const innerBlockPresets = {'align': 'full'};
-		const TEMPLATE = [['core/cover', innerBlockPresets]];
+		const TEMPLATE = [['core/image', innerBlockPresets]];
 
 		return (
 			<li className='splide__slide'>

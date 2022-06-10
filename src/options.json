@@ -1,6 +1,4 @@
 {
   "direction": "ttb",
-  "wheel": true,
-  "releaseWheel": true,
   "heightRatio" : 0.5
 }

@@ -1,4 +1,6 @@
-@import '@splidejs/splide/css';
+.page, .single {
+  @import '@splidejs/splide/css';
+}
 
 /**
  * The following styles get applied both on the front of your site
@@ -8,7 +10,12 @@
  */
 
 .splide {
-  &__track {}
-  &__list {}
-  &__slide {}
+  &__track {
+  }
+
+  &__list {
+  }
+
+  &__slide {
+  }
 }
