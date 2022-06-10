@@ -5,17 +5,30 @@
  */
 
 body.block-editor-page {
-  .wp-block-cs-flickity-slider {
+  .wp-block-cs-splide-slider {
+	.block-editor-inner-blocks {
+	  position: relative;
+	}
+
 	.block-editor-block-list__layout {
+	  position: static;
 	  overflow-x: auto;
+	  overflow-y: hidden;
 	  display: flex;
 
 	  .block-editor-block-list__block {
-		min-width: 100%;
+		min-width: 36%;
 
 		.wp-block {
 		  width: 100%;
 		}
+	  }
+
+	  .block-list-appender {
+		position: absolute;
+		top: auto;
+		right: 20px;
+		bottom: 30px;
 	  }
 	}
   }
