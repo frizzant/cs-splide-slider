@@ -1,4 +1,4 @@
-=== CS Flickity Slider Block ===
+=== CS Splide Slider Block ===
 Contributors:      Erin McGowan | Frizzant
 Tags:              block
 Tested up to:      5.9

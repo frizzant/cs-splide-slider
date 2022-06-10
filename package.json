@@ -19,7 +19,6 @@
 		"@wordpress/scripts": "^22.3.0"
 	},
 	"dependencies": {
-		"flickity": "^3.0.0",
-		"flickity-imagesloaded": "^2.0.0"
+		"@splidejs/splide": "^4.0.6"
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       CS Flickity Slider Block
- * Plugin URI:        www.calmarsolutions.ch
+ * Plugin Name:       CS Splide Slider Block
+ * Plugin URI:        www.calmarsolutions.ch | https://splidejs.com/
  * Description:       Displays Content in a Slider
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -21,6 +21,7 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+
 function cs_slider_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }

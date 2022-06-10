@@ -24,22 +24,26 @@ import './editor.scss';
  */
 
 export default function Edit({attributes, setAttributes}) {
-	const { /** Your custom attributes **/ } = attributes;
+	const { /** Your custom attributes **/} = attributes;
 
 	const blockProps = useBlockProps();
-	const ALLOWED_BLOCKS = ['cs/flickity-slider-inner'];
-	const TEMPLATE = [['cs/flickity-slider-inner', {attributes: {dimRatio: 0}}], ['cs/flickity-slider-inner', {attributes: {dimRatio: 0}}], ['cs/flickity-slider-inner', {attributes: {dimRatio: 0}}]];
+	const ALLOWED_BLOCKS = ['cs/splide-slide-inner'];
+	const TEMPLATE = [['cs/splide-slide-inner', {attributes: {dimRatio: 0}}], ['cs/splide-slide-inner', {attributes: {dimRatio: 0}}], ['cs/splide-slide-inner', {attributes: {dimRatio: 0}}]];
 
 	return (
 		<div {...blockProps}>
-			<div className='main-carousel'>
-				<InnerBlocks
-					allowedBlocks={ALLOWED_BLOCKS}
-					template={TEMPLATE}
-					orientation='horizontal'
-					renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
-				/>
-			</div>
+			<section className="splide" aria-label="slider">
+				<div className="splide__track">
+					<ul className="splide__list">
+						<InnerBlocks
+							allowedBlocks={ALLOWED_BLOCKS}
+							template={TEMPLATE}
+							orientation='horizontal'
+							renderAppender={() => <InnerBlocks.ButtonBlockAppender/>}
+						/>
+					</ul>
+				</div>
+			</section>
 		</div>
 	);
 }

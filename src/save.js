@@ -21,9 +21,13 @@ export default function save() {
 
 	return (
 		<div {...blockProps}>
-			<div className="main-carousel" /** data-flickity='{ "draggable": true }' **/ >
-				<InnerBlocks.Content/>
-			</div>
+			<section className="splide" aria-label="slider">
+				<div className="splide__track">
+					<ul className="splide__list">
+						<InnerBlocks.Content/>
+					</ul>
+				</div>
+			</section>
 		</div>
 	);
 }
