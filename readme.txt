@@ -10,8 +10,8 @@ Displays Content in a Slider
 
 == Description ==
 
-Gutenberg block for displaying content in a slider with the amazing Flickity Slider. By default it includes a non locked 'cover/cover' block.
-Flickity has the same license as this plugin. Commercial use will have to purchase a flickity license too. See https://flickity.metafizzy.co/license.html .
+Gutenberg block for displaying content in a slider with the amazing SplideJS Slider. By default it includes a non locked 'cover/cover' block.
+SplideJS Docs: https://splidejs.com/
 
 == Installation ==
 
@@ -26,11 +26,8 @@ e.g.
 == Frequently Asked Questions ==
 
 
-= How do I change flickity slider settings? =
-The file './src/flickity-config.json' contains an object that is passed to the 'frontend.js' script. You can simply add your options there, then rebuild the project with 'npm build'.
-
-= How do i programmatically add flickity slider settings? =
-You will have to create the wanted backend settings and then output the options object in the 'save.js' file. There is a commented 'data-flickity' attribute waiting for you to add your settings.
+= How do I change SplideJS slider settings? =
+The file './src/options.json' contains an object that is passed to the 'frontend.js' script. You can simply add your options there, then rebuild the project with 'npm build'.
 
 = What is the innerBlockWrapper.js for? =
 This file is used to wrap the inner blocks in the slider. Due to the nature of gutenberg it is not directly possible to allow block-variations with specific attributes to be added.
