@@ -10,7 +10,7 @@ Displays Content in a Slider
 
 == Description ==
 
-Gutenberg block for displaying content in a slider with the amazing SplideJS Slider. By default it includes a non locked 'cover/cover' block.
+Gutenberg block for displaying content in a slider with the amazing SplideJS Slider. By default it includes a non locked 'core/cover' block.
 SplideJS Docs: https://splidejs.com/
 
 == Installation ==
@@ -19,7 +19,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload the plugin files to the `/wp-content/plugins/cs-slider` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/cs-slider` directory (after build).
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
 
