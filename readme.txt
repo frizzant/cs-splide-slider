@@ -16,11 +16,13 @@ SplideJS Docs: https://splidejs.com/
 == Installation ==
 
 This section describes how to install the plugin and get it working.
+This block is based upon Wordpress create-block. See https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/ for more detailed information ob building etc.
 
 e.g.
 
-1. Upload the plugin files to the `/wp-content/plugins/cs-slider` directory (after build).
-1. Activate the plugin through the 'Plugins' screen in WordPress
+1. Build the plugin with ``npm run build``
+2. Upload the plugin files to the `/wp-content/plugins/cs-slider` directory.
+3. Activate the plugin through the 'Plugins' screen in WordPress
 
 
 == Frequently Asked Questions ==
